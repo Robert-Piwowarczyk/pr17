@@ -11,7 +11,7 @@ class HelloServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        String name = request.getParameter("imie");
+        String name = request.getParameter("imiona");
         String surname = request.getParameter("nazwisko");
 //        System.out.println(name + " " + surname);
 
@@ -19,5 +19,6 @@ class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.println("<h1>Hello " + name + " " + surname + "</h1>");
+
     }
 }
